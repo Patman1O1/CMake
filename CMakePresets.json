@@ -1,0 +1,88 @@
+{
+  "version": 10,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "unix",
+      "displayName": "Unix",
+      "hidden": false,
+      "description": "Base configuration for all Unix configurations.",
+      "generator": "Unix Makefiles",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Default",
+        "CMAKE_CXX_STANDARD": 23,
+        "CMAKE_CXX_STANDARD_REQUIRED": true,
+        "CMAKE_CXX_FLAGS": "-Wall -g"
+      },
+      "environment": {
+        "CC": "cc",
+        "CXX": "cxx"
+      },
+      "condition": {
+        "type": "anyOf",
+        "conditions": [
+          { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Linux" },
+          { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Darwin" }
+        ]
+      }
+    },
+    {
+      "name": "unix-g++",
+      "displayName": "Unix G++",
+      "description": "A Unix configuration that uses the G++ compiler.",
+      "inherits": "unix",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "/usr/bin/g++"
+      },
+      "environment": {
+        "CC": "gcc",
+        "CXX": "g++"
+      }
+    },
+    {
+      "name": "unix-clang++",
+      "displayName": "Unix Clang++",
+      "description": "A Unix configuration that uses the Clang++ compiler.",
+      "inherits": "unix",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+        "environment": {
+          "CC": "clang",
+          "CXX": "clang++"
+        }
+      }
+    },
+    {
+      "name": "clion-default",
+      "displayName": "CLion Default",
+      "hidden": false,
+      "description": "The default configuration for the CLion IDE that uses the MinGW toolchain.",
+      "generator": "Ninja",
+      "vendor": {
+        "jetbrains.com/clion": {
+          "toolchain": "MinGW"
+        }
+      },
+      "binaryDir": "${sourceDir}/build/clion-default",
+      "inherits": "default"
+    },
+    {
+      "name": "clion-wsl",
+      "displayName": "CLion WSL",
+      "hidden": false,
+      "description": "A configuration for the CLion IDE that uses the WSL toolchain.",
+      "generator": "Unix Makefiles",
+      "vendor": {
+        "jetbrains.com/clion": {
+          "toolchain": "WSL"
+        }
+      },
+      "binaryDir": "${sourceDir}/build/clion-wsl",
+      "inherits": "linux"
+    }
+  ]
+}
