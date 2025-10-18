@@ -5,13 +5,13 @@
     "minor": 24,
     "patch": 0
   },
+
   "configurePresets": [
     {
-      "name": "unix",
-      "displayName": "Unix",
-      "hidden": false,
-      "description": "Base configuration for all Unix configurations.",
-      "generator": "Unix Makefiles",
+      "name": "default",
+      "displayName": "Default",
+      "hidden": true,
+      "description": "The default configuration. All configurations inherit from this.",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Default",
         "CMAKE_CXX_STANDARD": 23,
@@ -21,7 +21,15 @@
       "environment": {
         "CC": "cc",
         "CXX": "cxx"
-      },
+      }
+    },
+    {
+      "name": "unix",
+      "displayName": "Unix",
+      "hidden": false,
+      "description": "Base configuration for all Unix configurations.",
+      "inherits": "default",
+      "generator": "Unix Makefiles",
       "condition": {
         "type": "anyOf",
         "conditions": [
