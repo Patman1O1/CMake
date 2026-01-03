@@ -1,6 +1,6 @@
 {
   "version": 10,
-  "include": ["../default.json"],
+  "include": ["default.json"],
   "configurePresets": [
     {
       "name": "default",
