@@ -1,6 +1,6 @@
 {
   "version": 10,
-  "include": ["../cmake-version.json"],
+  "include": ["cmake-version.json"],
   "configurePresets": [
     {
       "name": "default",
