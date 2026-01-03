@@ -1,0 +1,12 @@
+{
+  "version": 10,
+  "include": ["../default.json"],
+  "configurePresets": [
+    {
+      "name": "default",
+      "hidden": true,
+      "inherits": "default",
+      "generator": "Unix Makefiles"
+    }
+  ]
+}
