@@ -4,8 +4,6 @@
   "configurePresets": [
     {
       "name": "default",
-      "displayName": "Default",
-      "description": "The base configuration preset that all other configuration presets inherit from.",
       "hidden": true,
       "binaryDir": "${sourceDir}/build/${presetName}"
     }
@@ -13,8 +11,6 @@
   "buildPresets": [
     {
       "name": "default",
-      "displayName": "Default",
-      "description": "The base build preset that all other build presets inherit from.",
       "configurePreset": "default",
       "hidden": true
     }
@@ -22,8 +18,6 @@
   "testPresets": [
     {
       "name": "default",
-      "displayName": "Default",
-      "description": "The base test preset that all other build presets inherit from.",
       "configurePreset": "default",
       "hidden": true
     }
