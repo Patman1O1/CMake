@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 4.2)
 project(CMake
         LANGUAGES NONE
-        VERSION 0.1.0)
+        VERSION 0.1.0
+        DESCRIPTION "A project that contains CMake presets, modules, toolchains, and templates.")
 
 include(CMakePackageConfigHelpers)
-
-add_custom_target(cmake ALL )
 
 configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake-config.cmake.in"
         "cmake-config.cmake"
@@ -19,9 +18,9 @@ install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/include/"
         TYPE INCLUDE
         COMPONENT cmake-dev)
 
-#install(TARGETS cmake
-        #EXPORT cmake-targets
-        #COMPONENT cmake-dev)
+install(TARGETS cmake
+        EXPORT cmake-targets
+        COMPONENT cmake-dev)
 
 install(FILES
         "${CMAKE_CURRENT_BINARY_DIR}/cmake-config.cmake"
