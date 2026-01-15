@@ -19,3 +19,6 @@ export PATH="/opt/cmake/bin:$PATH"
 
 # Clean up
 rm -f "cmake-$VERSION-linux-$ARCH.sh"
+
+# Verify
+cmake --version
