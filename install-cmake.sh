@@ -15,7 +15,7 @@ curl -LO "https://github.com/Kitware/CMake/releases/download/v$VERSION/cmake-$VE
 sudo mkdir -p "/opt/cmake"
 chmod 700 "cmake-$VERSION-linux-$ARCH.sh"
 sudo "./cmake-$VERSION-linux-$ARCH.sh" --skip-license --prefix="/opt/cmake"
-export PATH="/opt/cmake/bin:$PATH"
+export PATH="$PATH:/opt/cmake/bin"
 
 # Clean up
 rm -f "cmake-$VERSION-linux-$ARCH.sh"
