@@ -17,3 +17,5 @@ chmod +x "cmake-$VERSION-linux-$ARCH.sh"
 sudo "./cmake-$VERSION-linux-$ARCH.sh" --skip-license --prefix="/opt/cmake"
 export PATH="/opt/cmake/bin:$PATH"
 
+# Clean up
+rm -f "cmake-$VERSION-linux-$ARCH.sh"
