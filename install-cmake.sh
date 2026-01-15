@@ -13,7 +13,8 @@ curl -LO "https://github.com/Kitware/CMake/releases/download/v$VERSION/cmake-$VE
 
 # Install the latest version of CMake
 sudo mkdir -p "/opt/cmake"
-export PATH="$PATH:/opt/cmake/bin"
+grep -qxF 'export PATH="/opt/cmake/bin:$PATH"' ~/.bashrc echo 'export PATH="/opt/cmake/bin:$PATH"' >> ~/.bashrc
+
 chmod 700 "cmake-$VERSION-linux-$ARCH.sh"
 sudo "./cmake-$VERSION-linux-$ARCH.sh" --skip-license --prefix="/opt/cmake"
 
