@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 # Check if CMake is already uninstalled
-if [ ! -e "/opt/cmake" && ! -e "/etc/profile.d/cmake-bin-path.sh"]; then
+if [[ ! -e "/opt/cmake" ]] && [[ ! -e "/etc/profile.d/cmake-bin-path.sh" ]]; then
     echo "CMake is already uninstalled"
     exit 0
 fi
