@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.28.0)
 project(CMake
         LANGUAGES NONE
         VERSION 0.1.0
-        DESCRIPTION "A project that contains CMake presets, modules, toolchains, and templates.")
+        DESCRIPTION "A project that contains CMake presets, scripts, modules, templates, and toolchains.")
 
 include(CMakePackageConfigHelpers)
 include(GNUInstallDirs)
