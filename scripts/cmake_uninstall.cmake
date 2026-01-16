@@ -17,8 +17,8 @@ foreach(ENTRY ${FILES})
                 COMMAND "${CMAKE_COMMAND}" -E remove "$ENV{DESTDIR}${ENTRY}"
                 RESULT_VARIABLE EXIT_CODE
         )
-        if(EXIT_CODE NOT EQUAL 0)
-            message(FATAL_ERROR "Problem when removing $ENV{DESTDIR}${ENTRY}: ${ERROR}")
+        if(NOT EXIT_CODE EQUAL 0)
+            message(FATAL_ERROR "Problem when removing $ENV{DESTDIR}${ENTRY}: Exit code = ${EXIT_CODE}")
         endif()
     else()
         message(STATUS "Entry $ENV{DESTDIR}${ENTRY} does not exist.")
