@@ -4,6 +4,7 @@
 set(CMAKE_MINIMUM_REQUIRED_VERSION 3.28.0 CACHE STRING "CMAKE_MINIMUM_REQUIRED_VERSION")
 set(CMAKE_VERSION 4.2.1 CACHE STRING "CMAKE_VERSION") # Always make CMAKE_VERSION the latest version of CMake
 
+
 #-----------------------------------------------------------------------------------------------------------------------
 # set_if_not_defined()
 #
@@ -18,6 +19,7 @@ function(set_if_not_defined VARIABLE VALUE)
         set(VARIABLE VALUE PARENT_SCOPE)
     endif()
 endfunction()
+
 
 #-----------------------------------------------------------------------------------------------------------------------
 # include_gtest()
@@ -42,6 +44,7 @@ function(include_gtest)
 
     include(GoogleTest)
 endfunction()
+
 
 #-----------------------------------------------------------------------------------------------------------------------
 # build_docs()
