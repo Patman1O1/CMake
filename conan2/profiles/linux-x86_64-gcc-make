@@ -1,0 +1,12 @@
+[settings]
+os=Linux
+arch=x86_64
+compiler=gcc
+compiler.version=14
+compiler.libcxx=libstdc++
+compiler.cppstd=23
+compiler.cstd=23
+
+[conf]
+tools.cmake.cmaketoolchain:generator=Unix Makefiles
+
