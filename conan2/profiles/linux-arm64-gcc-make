@@ -1,11 +1,8 @@
+include(gcc)
+
 [settings]
 os=Linux
-arch=armv8
-compiler=gcc
-compiler.version=14
-compiler.libcxx=libstdc++
-compiler.cppstd=23
-compiler.cstd=23
+arch=arm8
 
 [conf]
 tools.cmake.cmaketoolchain:generator=Unix Makefiles
