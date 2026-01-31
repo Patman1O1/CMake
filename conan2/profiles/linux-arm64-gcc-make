@@ -6,4 +6,5 @@ arch=arm8
 
 [conf]
 tools.cmake.cmaketoolchain:generator=Unix Makefiles
+tools.build:compiler_executables={"c": "/usr/bin/gcc", "cpp": "/usr/bin/g++"}
 
