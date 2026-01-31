@@ -5,3 +5,7 @@ compiler.libcxx=libstdc++
 compiler.cppstd=23
 compiler.cstd=23
 
+[buildenv]
+CC=gcc
+CXX=g++
+
