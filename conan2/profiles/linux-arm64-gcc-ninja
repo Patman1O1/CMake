@@ -2,7 +2,7 @@ include(clang)
 
 [settings]
 os=Linux
-arch=arm8
+arch=armv8
 
 [conf]
 tools.cmake.cmaketoolchain:generator:Ninja
